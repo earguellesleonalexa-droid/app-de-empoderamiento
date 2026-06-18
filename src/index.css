@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  font-family: 'Outfit', 'Poppins', sans-serif;
+  background: #faf8f5;
+  color: #2d2217;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overscroll-behavior: none;
+}
+
+#root {
+  min-height: 100dvh;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Scrollbar personalizado */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #ddd5c8;
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #9b7c50;
+}
+
+/* Selección de texto */
+::selection {
+  background: #9b7c5033;
+  color: #2d2217;
+}
+
+/* Eliminar tap highlight en móvil */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Input autofill */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px #fffdf9 inset;
+  -webkit-text-fill-color: #2d2217;
+  transition: background-color 5000s ease-in-out 0s;
+}
